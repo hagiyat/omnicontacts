@@ -24,6 +24,7 @@ module OmniContacts
     end
 
     def call env
+      binding.pry
       @ins << @app unless rack14? || @ins.include?(@app)
       to_app.call(env)
     end
